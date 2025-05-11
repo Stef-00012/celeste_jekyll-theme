@@ -1,0 +1,32 @@
+<button class="open-button" onclick="toggleNav()">&#9776;</button>
+
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-button" onclick="toggleNav()">&times;</a>
+
+    {%- for item in site.html_pages -%}
+    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    {%- endfor -%}
+</div>
+
+<script>
+    let sidebarOpen = false;
+    const sidebarWidth = "250px";
+
+    function toggleNav() {
+        const sidebar = document.getElementById("sidebar");
+
+        if (sidebarOpen) sidebar.style.width = "0";
+        else sidebar.style.width = sidebarWidth;
+
+        sidebarOpen = !sidebarOpen;
+    }
+
+    {% if site.close_sidebar_on_outside_click %}
+    document.addEventListener('click', function (event) {
+        const sidebar = document.getElementById("sidebar");
+        const openButton = document.querySelector(".open-button");
+
+        if (sidebarOpen && !sidebar.contains(event.target) && !openButton.contains(event.target)) toggleNav();
+    });
+    {% endif %}
+</script>

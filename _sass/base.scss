@@ -1,7 +1,10 @@
 body {
-    background-color: #24273a;
+    background-color: var(--color-base-100);
     font-family: sans-serif;
+    color: var(--color-base-content);
+}
+
+.main {
+    width: 70ch;
     margin: auto;
-    max-width: 70ch;
-    color: #cad3f5;
 }

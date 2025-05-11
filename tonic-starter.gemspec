@@ -4,7 +4,7 @@
 Gem::Specification.new do |spec|
   spec.name = "tonic-starter"
   spec.version = "0.1.0"
-  spec.authors = [""]
+  spec.authors = ["Stef-00012"]
   spec.email = [""]
 
   spec.summary = ""

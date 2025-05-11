@@ -1,5 +1,9 @@
-title: Hyde
+title: Celeste
 description: "A minimalist theme focused on simplicity"
 encoding: utf-8
+
+light_theme: false
+
+close_sidebar_on_outside_click: true
 
 exclude: ["README.md", "LICENSE", "*.gem", "*.gemspec", "Gemfile.lock", "tmp.txt"]
