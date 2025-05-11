@@ -21,7 +21,7 @@
         sidebarOpen = !sidebarOpen;
     }
 
-    {% if site.close_sidebar_on_outside_click %}
+    {% if site.sidebar_close_on_outside_click %}
     document.addEventListener('click', function (event) {
         const sidebar = document.getElementById("sidebar");
         const openButton = document.querySelector(".open-button");
